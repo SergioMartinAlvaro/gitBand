@@ -10,7 +10,7 @@ var port = process.env.PORT || 3977;
 mongoose.Promise = global.Promise;
 
 //Crea la conexion con mongoDB y la bbdd
-mongoose.createConnection('mongodb://localhost:27017/gitBand', (err, res) => {
+mongoose.connect('mongodb://localhost:27017/gitBand', { useMongoClient: true }, (err, res) => {
 	if(err) {
 		throw err;
 	} else {

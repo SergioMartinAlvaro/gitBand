@@ -10,7 +10,8 @@ var UserSchema = Schema({
 	surname: String,
 	email: String,
 	password: String,
-	role: String
+	role: String,
+	image: String
 });
 
 //Exportamos el modelo con el nombre de user

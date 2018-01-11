@@ -13,7 +13,7 @@ function pruebas(req, res) {
 //Metodo que registrara usuarios
 function saveUser(req, res) {
 	//Instancia del modelo de usuario
-	var user = new User();
+	var user = new User({});
 
 	//Recogemos parametros
 	var params = req.body;
@@ -31,7 +31,7 @@ function saveUser(req, res) {
 			if(user.name != null && user.surname != null && user.email != null) {
 				//Guardamos el usuario
 				user.save((err, userStored) => {
-									console.log("llego aqui");
+					
 					if(err) {
 						res.status(500).send({message: "System failed to save the user"});
 					} else {
