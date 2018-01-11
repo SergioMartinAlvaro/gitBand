@@ -9,7 +9,8 @@ var bodyParser = require("body-parser");
 
 var app = express();
 
-//RUTAS
+//RUTAS, cargamos los ficheros de rutas
+var user_routes = require('./routes/user.js');
 
 //CONFIG BODYPARSER
 
@@ -21,9 +22,7 @@ app.use(bodyParser.json());
 
 //RUTAS BASE
 
-app.get('/pruebas', function(req, res) {
-	res.status(200).send({message: "Bienvenido a mi web"});
-});
+app.use('/api', user_routes);
 
 //Exportamos el modulo a otros ficheros que usen app
 module.exports = app;
