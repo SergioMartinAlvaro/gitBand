@@ -89,8 +89,70 @@ function loginUser(req, res) {
 	});
 }
 
+function updateUser(req, res) {
+
+	//recogemos el id del usuario
+	var userId = req.params.id;
+	var update = req.body;
+	
+	//Actualizamos los datos del usuario dado un id
+	User.findByIdAndUpdate(userId, update, (err, userUpdated) => {
+		if(err) {
+			res.status(500).send({message: "Failed to update user, server error."});
+		} else {
+			if(!userUpdated) {
+				res.status(404).send({message: "Failed to update user, user not found."})
+			} else {
+				res.status(200).send({user: userUpdated});
+			}
+		}
+	});
+}
+
+function uploadImage(req, res) {
+
+	//Recibimos un user id
+	var userId = req.params.id;
+	//nombre de fichero por defecto
+	var file_name = "No subido";
+	//Comprobamos si hay fichero en la request
+	if(req.files) {
+		//Recogemos el nombre que esta entre las barras
+		var file_path = req.files.image.path;
+		var file_split = file_path.split('\\');
+		var file_name = file_split[2];
+
+		//Extraemos la extension
+		var ext_split = file_name.split('\.');
+		var file_ext = ext_split[1];
+
+		//Comprobamos que es una imagen
+		if(file_ext == 'png' || file_ext == 'jpg' || file_ext == 'gif' || file_ext == 'JPEG') {
+			User.findByIdAndUpdate(userId, {image: file_name}, (err, userUpdated) => {
+				console.log(userId);
+				if(err) {
+					res.status(500).send({message: "Failed to connect to server"});
+				} else {
+					if(!userUpdated) {
+						res.status(404).send({message: "Unable to update the user image"});
+					} else {
+						res.status(200).send({user: userUpdated});
+					}
+				}
+				
+			});
+		} else {
+			res.status(200).send({message: "Invalid file extension."});
+		}
+	} else {
+		res.status(200).send({message: "Image not uploaded, try again."})
+	}
+}
+
 module.exports = {
 	pruebas,
 	saveUser,
-	loginUser
+	loginUser,
+	updateUser,
+	uploadImage
 };
