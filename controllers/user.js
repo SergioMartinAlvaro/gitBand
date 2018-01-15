@@ -2,7 +2,12 @@
 
 var User = require('../models/user.js');
 var bcrypt = require('bcrypt-nodejs');
-var jwt = require('../services/jwt.js')
+var jwt = require('../services/jwt.js');
+//Para acceder al sistema de ficheros
+var fs = require('fs');
+//Para acceder a rutas concretas
+var path = require('path');
+
 
 /* Metodo que recibe req y res */
 function pruebas(req, res) {
@@ -149,7 +154,23 @@ function uploadImage(req, res) {
 	}
 }
 
+function getImageFile(req, res){
+	//La imagen llega por la url
+	var imageFile = req.params.imageFile;
+	var path_file = './uploads/users/' + imageFile;
+	//Comprobamos que el fichero existe
+	fs.exists(path_file, function(exists) {
+		//Si existe devolvemos el fichero
+		if(exists) {
+			res.sendFile(path.resolve(path_file));
+		} else {
+			res.status(404).send({message: "Image not found."})
+		}
+	});
+}
+
 module.exports = {
+	getImageFile,
 	pruebas,
 	saveUser,
 	loginUser,

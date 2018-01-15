@@ -11,6 +11,7 @@ var app = express();
 
 //RUTAS, cargamos los ficheros de rutas
 var user_routes = require('./routes/user.js');
+var artist_routes = require('./routes/artist.js');
 
 //CONFIG BODYPARSER
 
@@ -23,6 +24,7 @@ app.use(bodyParser.json());
 //RUTAS BASE
 
 app.use('/api', user_routes);
+app.use('/api', artist_routes);
 
 //Exportamos el modulo a otros ficheros que usen app
 module.exports = app;
