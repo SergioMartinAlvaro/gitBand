@@ -134,7 +134,7 @@ function uploadImage(req, res) {
 		//Comprobamos que es una imagen
 		if(file_ext == 'png' || file_ext == 'jpg' || file_ext == 'gif' || file_ext == 'JPEG') {
 			User.findByIdAndUpdate(userId, {image: file_name}, (err, userUpdated) => {
-				console.log(userId);
+
 				if(err) {
 					res.status(500).send({message: "Failed to connect to server"});
 				} else {
