@@ -67,7 +67,7 @@ function getArtists(req, res) {
 			} else {
 				return res.status(200).send({
 					total_items: total,
-					artists: artists
+					artist: artists
 				})
 			}
 		}

@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"getAl",
+				"getAlbums"
+			],
+			[
+				"res",
+				"res"
+			],
+			[
+				"save",
+				"saveAlbum"
+			],
+			[
+				"ge",
+				"getAlbum"
+			],
+			[
+				"al",
+				"albumStored"
+			],
+			[
+				"a",
+				"albumId"
+			],
+			[
+				"uploadI",
+				"uploadImage"
+			],
+			[
+				"md_",
+				"md_uploar"
+			],
+			[
+				"alb",
+				"albumRemoved"
+			],
+			[
+				"artis",
+				"artistRemoved"
+			],
+			[
 				"getA",
 				"getArtists"
 			],
@@ -44,10 +84,6 @@
 				"SongSchema"
 			],
 			[
-				"a",
-				"albumSchema"
-			],
-			[
 				"A",
 				"ArtistSchema"
 			]
@@ -59,7 +95,43 @@
 			"file": "controllers/artist.js",
 			"settings":
 			{
-				"buffer_size": 2180,
+				"buffer_size": 4881,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controllers/album.js",
+			"settings":
+			{
+				"buffer_size": 1849,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Sergi/Desktop/ari",
+			"settings":
+			{
+				"buffer_size": 1777,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "controllers/user.js",
+			"settings":
+			{
+				"buffer_size": 4624,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "routes/albums.js",
+			"settings":
+			{
+				"buffer_size": 535,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -68,16 +140,7 @@
 			"file": "routes/artist.js",
 			"settings":
 			{
-				"buffer_size": 566,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "routes/user.js",
-			"settings":
-			{
-				"buffer_size": 1008,
+				"buffer_size": 874,
 				"line_ending": "Windows"
 			}
 		}
@@ -119,16 +182,18 @@
 		"/C/xampp/htdocs/gitBand/middlewares",
 		"/C/xampp/htdocs/gitBand/models",
 		"/C/xampp/htdocs/gitBand/routes",
-		"/C/xampp/htdocs/gitBand/services",
-		"/C/xampp/htdocs/gitBand/uploads"
+		"/C/xampp/htdocs/gitBand/services"
 	],
 	"file_history":
 	[
-		"/C/xampp/htdocs/gitBand/controllers/artist.js",
-		"/C/xampp/htdocs/gitBand/routes/artist.js",
 		"/C/xampp/htdocs/gitBand/app.js",
-		"/C/xampp/htdocs/gitBand/routes/user.js",
+		"/C/xampp/htdocs/gitBand/routes/albums.js",
+		"/C/xampp/htdocs/gitBand/routes/album.js",
+		"/C/xampp/htdocs/gitBand/routes/artist.js",
+		"/C/xampp/htdocs/gitBand/uploads/artists/bXmGzDz8s0TruuZuFfw49-jp.jpg",
 		"/C/xampp/htdocs/gitBand/controllers/user.js",
+		"/C/xampp/htdocs/gitBand/controllers/artist.js",
+		"/C/xampp/htdocs/gitBand/routes/user.js",
 		"/C/xampp/htdocs/gitBand/index.js",
 		"/C/xampp/htdocs/gitBand/services/jwt.js",
 		"/C/xampp/htdocs/gitBand/middlewares/authenticated.js",
@@ -140,13 +205,14 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 52.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 134.0,
 		"where_history":
 		[
+			"C:\\xampp\\htdocs\\gitBand"
 		]
 	},
 	"find_state":
@@ -154,6 +220,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"req.files.image.path"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -166,12 +233,12 @@
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
-		"wrap": true
+		"wrap": false
 	},
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -180,15 +247,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2180,
+						"buffer_size": 4881,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2180,
-								2180
+								1658,
+								1658
 							]
 						],
 						"settings":
@@ -196,27 +263,112 @@
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1320.0,
+						"translation.y": 520.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "routes/artist.js",
+					"file": "controllers/album.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 566,
+						"buffer_size": 1849,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7,
-								7
+								1318,
+								1318
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 74.0,
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/Sergi/Desktop/ari",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1777,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								589,
+								589
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "controllers/user.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 4624,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "routes/albums.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 535,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								462,
+								462
 							]
 						],
 						"settings":
@@ -227,16 +379,16 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "routes/user.js",
-					"semi_transient": true,
+					"buffer": 5,
+					"file": "routes/artist.js",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1008,
+						"buffer_size": 874,
 						"regions":
 						{
 						},
@@ -255,7 +407,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -263,7 +415,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 28.0
 	},
 	"input":
 	{
@@ -300,7 +452,7 @@
 	"project": "proyecto-gitBand.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 53.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -338,7 +490,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 252.0,
+	"side_bar_width": 342.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
