@@ -183,7 +183,6 @@
 		"height": 134.0,
 		"where_history":
 		[
-			"C:\\xampp\\htdocs\\gitBand"
 		]
 	},
 	"find_state":
@@ -191,7 +190,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"req.files.image.path"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -250,7 +248,7 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "",
-	"project": "proyecto-gitBand.sublime-project",
+	"project": "gitBand.sublime-project",
 	"replace":
 	{
 		"height": 53.0
