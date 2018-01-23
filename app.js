@@ -22,6 +22,17 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
 //CONFIG HEADERS
+//Next es para salir de la middleware
+app.use((req, res, next) => {
+	//Permitimos el acceso a todos los dominios
+	res.header("Access-Control-Allow-Origin","*");
+	res.header("Access-Control-Allow-Headers","Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method");
+	//Permitimos distintos metodos http
+	res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
+	res.header("Allow", "GET, POST, OPTIONS, PUT, DELETE");
+	next();
+});	
+
 
 //RUTAS BASE
 
