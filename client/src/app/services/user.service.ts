@@ -38,6 +38,27 @@ export class UserService {
 		return this._http.post(this.url+'login', params, {headers: headers}).map(res => res.json());
 	}
 
+	register(user_to_register) {
+
+		let json = JSON.stringify(user_to_register);
+		let params = json;
+
+		let headers = new Headers({'Content-Type':'application/json'});
+
+		return this._http.post(this.url+'register', params, {headers: headers}).map(res => res.json());
+	}
+
+	updateUser(user_to_update) {
+
+		let json = JSON.stringify(user_to_update);
+		let params = json;
+
+		let headers = new Headers({'Content-Type':'application/json',
+		'Authorization':this.getToken()});
+
+		return this._http.post(this.url + 'update-user/' + user_to_update._id, params, {headers: headers}).map(res => res.json());
+	}
+
 	//Devuelve el objeto identity de la session storage
 	getIdentity() {
 		//Hacemos del item un objeto js
@@ -54,8 +75,8 @@ export class UserService {
 
 	//Devuelve el objeto token de la session storage
 	getToken() {
-		let token = JSON.parse(localStorage.getItem('token'));
-		if(token) {
+		let token = localStorage.getItem('token');
+		if(token != 'undefined') {
 			this.token = token;
 		} else {
 			this.token = null;
