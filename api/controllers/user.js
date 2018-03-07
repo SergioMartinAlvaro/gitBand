@@ -99,6 +99,10 @@ function updateUser(req, res) {
 	//recogemos el id del usuario
 	var userId = req.params.id;
 	var update = req.body;
+ 	delete update._id; // Remover el ID
+//	if(userId == req.user.sub) {
+//		return res.status(500).send({message: "Unauthorized action, u shall not pass"});
+//	}
 	
 	//Actualizamos los datos del usuario dado un id
 	User.findByIdAndUpdate(userId, update, (err, userUpdated) => {
