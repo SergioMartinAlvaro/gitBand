@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from "./models/user";
 //Importamos el servicio
 import { UserService } from "./services/user.service";
+import { GLOBAL } from './services/global';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import { UserService } from "./services/user.service";
   providers: [UserService]
 })
 export class AppComponent implements OnInit {
-  title = 'SERGIOTY-FY';
+  title = 'GIT-BAND';
   public user: User;
   public user_register: User;
   //guarda al usuario logueado
@@ -18,6 +19,7 @@ export class AppComponent implements OnInit {
   public token;
   public errorMessage;
   public message;
+  public url:string;
 
   //Asigna valores a las propiedades de la clase
   constructor( private _userService:UserService) {

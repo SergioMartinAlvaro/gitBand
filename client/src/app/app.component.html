@@ -1,53 +1,58 @@
 
+  <div class="row main">
   <div *ngIf="identity" class="navigation col-lg-1">
-    <h1>
-      {{ title }}
+    <h1 class="head-title">
+      <i class="fas fa-music"></i>
+      <a [routerLink]="['/']">
+        {{ title }}
+      </a>
     </h1>
     <nav id="navigation">
       <span>
-        <a href="#"><i class="fas fa-search"></i> Buscar</a>
+        <i class="fas fa-search"></i>
+        <a href="#">Buscar</a>
       </span><br>
       <span>
-        <a href="#"><i class="fas fa-star"></i> Artistas</a>
+        <i class="fas fa-star"></i>
+        <a href="#">Artistas</a>
       </span><br>
       <span>
-        <a href="#"><i class="fas fa-book"></i> Albums</a>
+        <i class="fas fa-book"></i>
+        <a href="#">Albums</a>
       </span>
     </nav>
 
     <nav id="user_logged">
+      <div class="user-image">
+        <img src="{{url + 'get-image-user/' + identity.image}}" class="img-responsive" id="image-logged" />
+      </div>
      <span id="identity_name">
         {{identity.name}} {{identity.surname}}
       </span><br>
-      <span class="btn btn-warning" (click)="logout()">
-        Cerrar Sesion
-      </span>
       <br>
+       <i class="fas fa-cog"></i> 
       <a [routerLink]="['/mis-datos']">
-        <i class="fas fa-cog"></i> Mis datos
+       Mis datos
+      </a>
+    <i class="fas fa-sign-out-alt btn-logout"></i>
+      <a (click)="logout()" class="btn-logout">
+        Salir
       </a>
     </nav>
   </div>
-
-  <div class="clearfix"></div>
-
   <div *ngIf="identity" class="central col-lg-11">
-    <p>Estas logueado en la app</p>
     <router-outlet></router-outlet>
   </div>
-  <div class="central col-lg-12" *ngIf="!identity" >
-  <div class="row col-center">
-    <div *ngIf="errorMessage" class="alert alert-info col-center col-lg-10 top-align">
-     <strong>Error! </strong>{{errorMessage}}
-    </div>
-  </div>
-  <div class="row col-center">
-    <div *ngIf="message" class="alert alert-info col-center col-lg-10 top-align">
-      <strong>{{message}}</strong>
-    </div>
-  </div>
-    <div class="col-lg-6 d-block float-left">
+
+  <div class="central col-lg-11" *ngIf="!identity" >
+    <div class="col-lg-6">
         <h1>Identificate</h1>
+          <div *ngIf="errorMessage">
+            <strong>Error! </strong>{{errorMessage}}
+          </div>
+          <div *ngIf="message">
+            <strong>{{message}}</strong>
+          </div>
         <form #loginForm="ngForm" (ngSubmit)="onSubmit()" class="col-md-7">
         <br>
           <p>
@@ -61,8 +66,10 @@
           </p>
         </form>
       </div>
+    </div>
 
-    <div class="col-lg-6 d-block float-right">
+    <div class="col-lg-11" *ngIf="!identity">
+          <div class="col-lg-6">
       <h1>Registrate</h1>
       <form #registerForm="ngForm" (ngSubmit)="onSubmitRegister()" class="col-md-7" >
           <label for="name"><b>Name: </b></label>
@@ -78,6 +85,7 @@
       </form>
     </div>
   </div>
+</div>
 
 
 

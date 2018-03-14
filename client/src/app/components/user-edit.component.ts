@@ -49,7 +49,8 @@ export class UserEditComponent implements OnInit{
 							//Recogemos el resultado de la peticion ajax y actualizamos el localStorage
 							this.user.image = result.image;
 							localStorage.setItem('identity', JSON.stringify(this.user));
-
+							let image_path = this.url + 'get-image-user/' + this.user.image;
+							document.getElementById('image-logged').setAttribute('src', image_path);
 							console.log(this.user);
 
 						});
@@ -78,7 +79,7 @@ export class UserEditComponent implements OnInit{
 
 	//Realiza peticion ajax al servidor
 	makeFileRequest(url: string, params: Array<string>, files: Array<File>){
-		var token = this.token;
+		var token = this._userService.getToken();
 
 		return new Promise(function(resolve, reject){
 		//Simula funcionamiento de formulario

@@ -1,4 +1,4 @@
-<div class="col-md-6 d-block">
+<div class="col-md-6">
       <h1>{{titulo}}</h1>
       <div *ngIf="alertMessage">
       	<div class="alert alert-info">
@@ -14,7 +14,7 @@
           <input type="email" class="form-control" #email="ngModel" name="email" [(ngModel)]="user.email" required /><br>
 
           <div class="image_for_edit" *ngIf=" user.image && user.image != 'null'">
-            <img src=""/>
+            <img src="{{url + 'get-image-user/' + user.image}}" class="img-responsive" style="width: 50px" />
           </div>
           <p>
               <label><b>Sube tu foto: </b></label>
