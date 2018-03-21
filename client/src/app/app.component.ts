@@ -3,7 +3,7 @@ import { User } from "./models/user";
 //Importamos el servicio
 import { UserService } from "./services/user.service";
 import { GLOBAL } from './services/global';
-
+import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -22,7 +22,11 @@ export class AppComponent implements OnInit {
   public url:string;
 
   //Asigna valores a las propiedades de la clase
-  constructor( private _userService:UserService) {
+  constructor( 
+    private _userService:UserService,
+    private _route:ActivatedRoute,
+    private _router:Router,
+  ) {
   	this.user = new User('','','','','','ROLE_USER','');
   	this.user_register = new User('','','','','','ROLE_USER','');
   }
@@ -87,7 +91,6 @@ export class AppComponent implements OnInit {
   	this.token = null;
   	this.identity = null;
   	this.user = new User('','','','','','ROLE_USER','');
-
   }
 
   public onSubmitRegister() {
