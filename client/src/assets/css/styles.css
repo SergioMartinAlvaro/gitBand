@@ -5,6 +5,11 @@ html, body {
 
 }
 
+.actived {
+	border-bottom: 4px solid #84BD00;
+	padding-bottom: 4px;
+}
+
 .head-title{
 	font-size: 20px;
 	font-weight: bold;
@@ -13,14 +18,29 @@ html, body {
 	display: block;
 }
 
+.jumbotron{
+	background-color:#eee;
+	margin-left: 15%;
+}
+
 .navigation {
 	text-align: center;
 	color: white;
 	background: #1C1C1F;
 	height: 100%;
+	padding-left: 1.5%;
 }
 
+.navigation nav {
+	width: 100%;
+}
 
+.navigation2 {
+	text-align: center;
+	color: white;
+	background: #1C1C1F;
+	padding-left: 1.5%;
+}
 
 .navigation a {
 	color: #ddd;
@@ -52,17 +72,15 @@ html, body {
 
 #user_logged{
 	background: #1C1C1F;
-	position: absolute;
 	bottom: 0px;
 	border-top: 1px solid #444;
-	width: 75%;
 	text-decoration: none;
 	text-align: center;
 }
 
 #identity_name{
 	text-align: center;
-	margin-left: 5px;
+
 }
 
 #user_logged .user-image {
@@ -70,9 +88,9 @@ html, body {
 	border-radius: 100px;
 	height: 57px;
 	width: 57px;
-	margin: 0px auto;
-	margin-top: 15px;
+	margin: 10px auto;
 	overflow: hidden;
+	margin-top: 150px;
 }
 
 #user_logged .user-image img{

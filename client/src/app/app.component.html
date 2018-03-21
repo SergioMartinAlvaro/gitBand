@@ -10,19 +10,19 @@
     <nav id="navigation">
       <span>
         <i class="fas fa-search"></i>
-        <a href="#">Buscar</a>
+        <a href="#" [routerLinkActive]="['actived']">Buscar</a>
       </span><br>
       <span>
         <i class="fas fa-star"></i>
-        <a href="#">Artistas</a>
+        <a [routerLink]="['/artists', 1]" [routerLinkActive]="['actived']" >Artistas</a>
       </span><br>
       <span>
         <i class="fas fa-book"></i>
-        <a href="#">Albums</a>
+        <a href="#" [routerLinkActive]="['actived']">Albums</a>
       </span>
     </nav>
 
-    <nav id="user_logged">
+    <nav id="user_logged" class="navigation2">
       <div class="user-image">
         <img src="{{url + 'get-image-user/' + identity.image}}" class="img-responsive" id="image-logged" />
       </div>
@@ -31,16 +31,16 @@
       </span><br>
       <br>
        <i class="fas fa-cog"></i> 
-      <a [routerLink]="['/mis-datos']">
+      <a [routerLink]="['/mis-datos']" [routerLinkActive]="['actived']">
        Mis datos
       </a>
     <i class="fas fa-sign-out-alt btn-logout"></i>
-      <a (click)="logout()" class="btn-logout">
+      <a (click)="logout()" [routerLink]="['/']" class="btn-logout">
         Salir
       </a>
     </nav>
   </div>
-  <div *ngIf="identity" class="central col-lg-11">
+  <div [class.hidden]="!identity" *ngIf="identity" class="central col-lg-11">
     <router-outlet></router-outlet>
   </div>
 

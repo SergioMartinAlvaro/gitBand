@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+
 
 import { UserService } from '../services/user.service';
 import { User } from '../models/user';
@@ -19,7 +21,9 @@ export class UserEditComponent implements OnInit{
 	public url:string;
 
 	constructor(
-		private _userService:UserService
+		private _userService:UserService,
+		private _route: ActivatedRoute,
+		private _router: Router
 	){
 		//LocalStorage
 		this.identity = this._userService.getIdentity();
