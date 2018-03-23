@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
-import { UserService } from '../services/user.service';
 import { GLOBAL } from '../services/global';
 import { ArtistService } from '../services/artist.service';
+import { UserService } from '../services/user.service';
 import { Artist } from '../models/artist';
 
 @Component({
@@ -24,12 +24,12 @@ export class ArtistAddComponent implements OnInit {
 		//Recoge las rutas
 		private _route: ActivatedRoute,
 		private _router: Router,
-		private _userService: UserService,
+		private _userService:UserService,
 		private _artistService: ArtistService
 	) {
 		this.titulo = 'Crear nuevo artista';
 		this.identity = this._userService.getIdentity();
-		this. token = this._userService.getIdentity();
+		this.token = this._userService.getToken();
 		this.url = GLOBAL.url;
 		this.artist = new Artist('','','');
 	}
@@ -57,7 +57,7 @@ export class ArtistAddComponent implements OnInit {
 
 				if(errorMessage != null) {
 					var body = JSON.parse(error._body);
-					this.alertRegister = body.message;
+					this.alertMessage = body.message;
 					console.log(error);
 				}
 			}
