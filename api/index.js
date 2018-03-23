@@ -12,6 +12,7 @@ mongoose.Promise = global.Promise;
 //Crea la conexion con mongoDB y la bbdd
 mongoose.connect('mongodb://localhost:27017/gitBand', { useMongoClient: true }, (err, res) => {
 	if(err) {
+		console.log("Database not working");
 		throw err;
 	} else {
 		console.log("Database its running corretly");

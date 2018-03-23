@@ -26,7 +26,7 @@ export class ArtistService {
 			'Content-Type':'application/json',
 			'Authorization':token
 		});
-		return this._http.post(this.url+'saveArtist', params,{headers:headers}).map(res => res.json());
+		return this._http.post(this.url+'saveArtist', params,{headers : headers}).map(res => res.json());
 
 	}
 
