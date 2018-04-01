@@ -19,10 +19,17 @@
 			La descripcion es obligatoria
 		</span>
 	</p>
-	<p>
-        <label><b>Sube su foto: </b></label>
-        <input type="file" placeholder="Subir Imagen" (change)="fileChangeEvent($event)" class="btn"/>
-    </p>
+
+    <div *ngIf="is_edit" class="">
+    	<div class="image_for_edit" *ngIf="artist.image && artist.image != 'null'">
+    		<img src="{{url + 'get-image-artist/' + artist.image}}" />
+    	</div>
+
+    	<p>
+    		<label><b> Sube la imagen del artista:</b></label><br>
+    		<input type="file" placeholder="Subir Imagen" (change)="fileChangeEvent($event)" class="btn"/>
+   		</p>
+   	</div>
 
 	<input type="submit" value="{{titulo}}" [disabled]="!formArtist.form.valid" class="btn-btn-success"/>
 </form>
