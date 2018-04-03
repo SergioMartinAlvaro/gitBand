@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home.component';
 import {ArtistListComponent} from './components/artist-list.component';
 import { ArtistAddComponent } from './components/artist-add.component';
 import { ArtistEditComponent } from './components/artist-edit.component';
+import { ArtistDetailComponent } from './components/artist-detail.component';
 
 //array con todas nuestras configuraciones de rutas
 
@@ -18,6 +19,7 @@ const appRoutes: Routes = [
 	{path: 'artists/:page', component: ArtistListComponent},
 	{path: 'mis-datos', component: UserEditComponent},
 	{path: 'crear-artista', component: ArtistAddComponent},
+	{path: 'ver-artista/:id', component: ArtistDetailComponent},
 	{path: 'editar-artista/:id', component: ArtistEditComponent},
 	{path: '**', component: HomeComponent},
 	{path: '', component: HomeComponent},

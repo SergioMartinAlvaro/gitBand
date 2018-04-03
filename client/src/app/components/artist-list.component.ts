@@ -21,6 +21,7 @@ export class ArtistListComponent implements OnInit {
 	//Paginacion
 	public next_page;
 	public prev_page;
+	public alertMessage: string;
 
 	constructor(
 		//Recoge las rutas
@@ -79,4 +80,34 @@ export class ArtistListComponent implements OnInit {
 
 		});
 	}
-}
+
+	public confirmado;
+	onDeleteConfirm(id){
+		this.confirmado = id;
+	}
+
+	onCancelArtist() {
+		this.confirmado = null;
+	}
+
+	onDeleteArtist(id){
+		this._artistService.deleteArtist(this.token, id).subscribe(
+			response => {
+				if(!response.artist) {
+					this.alertMessage = "Error en el servidor";
+				} else {
+
+				}
+				this.getArtists();
+			},
+			error => {
+
+				var errorMessage = <any>error;
+
+				if(errorMessage != null){
+					var body = JSON.parse(error._body);
+					console.log(error);
+				}
+			});
+		}
+	}

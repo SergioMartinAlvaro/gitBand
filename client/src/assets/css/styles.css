@@ -10,6 +10,19 @@ html, body {
 	padding-bottom: 4px;
 }
 
+.central{
+	height: 100%;
+	overflow-y:scroll;
+}
+
+.seguro {
+	margin-top: -35px;
+	background: #222326;
+	width: 90%;
+	height: 40px;
+	position: absolute;
+}
+
 .head-title{
 	font-size: 20px;
 	font-weight: bold;
@@ -151,3 +164,17 @@ html, body {
 	background: #222326;
 	padding: 10px;
 }
+
+#artist-head-card .image{
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	float: left;
+	margin-right: 30px;
+	margin-top: 10px;
+}
+
+#artist-head-card .image img{
+	height: 150px;
+}
+
