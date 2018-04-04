@@ -29,6 +29,7 @@ export class AppComponent implements OnInit {
   ) {
   	this.user = new User('','','','','','ROLE_USER','');
   	this.user_register = new User('','','','','','ROLE_USER','');
+    this.url = GLOBAL.url;
   }
 
   ngOnInit() {
