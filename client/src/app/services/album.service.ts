@@ -49,4 +49,18 @@ export class AlbumService {
 		});
 		return this._http.put(this.url+'update-album/'+id,params,{headers: headers}).map(res => res.json());
 	}
+
+	getAlbums(token, id = null) {
+		let headers = new Headers({
+			'Content-Type':'application/json',
+			'Authorization':token
+		});
+		let options = new RequestOptions({headers:headers});
+
+		if(id == null) {
+			return this._http.get(this.url+'albums', options).map(res => res.json());
+		} else {
+			return this._http.get(this.url+'albums/'+id, options).map(res => res.json());
+		}
+	}
 }

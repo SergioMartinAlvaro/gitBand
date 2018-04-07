@@ -119,7 +119,7 @@ html, body {
 	width: 150px;
 }
 
-.artist-item {
+.artist-item, .album-item{
 	width: 23%;
 	padding: 0px;
 	margin: 0px;
@@ -131,14 +131,14 @@ html, body {
 	display: inline-block;
 }
 
-.artist-list {
+.artist-list, .album-list{
 	margin: 0px;
 	padding: 0px;
 	margin-top: 30px;
 	list-style: none;
 }
 
-.artist-item .artist-image {
+.artist-item .artist-image, .album-item .album-image {
 	height: 245px;
 	width: 100%;
 	overflow: hidden;
@@ -146,23 +146,35 @@ html, body {
 	text-align: center;
 }
 
-.artist-item .artist-image img {
+.artist-item .artist-image img{
 	height:100%;
 }
 
-.artist-item .artist-name{
+.artist-item .artist-name, .album-item .album-name{
 	color:white;
 	background: #222326;
 	padding: 10px;
 }
 
-.artist-item .artist-name a{
+.artist-item .artist-name a, .album-item .album-name a{
 	color: white;
 }
 
-.artist-list .artist-item .buttons{
+.artist-list .artist-item .buttons, .album-list .album-item .buttons{
 	background: #222326;
 	padding: 10px;
+}
+
+.album-item{
+	height: 355px;
+}
+
+.album-item .album-image img {
+	width: 100%;
+}
+
+.album-item .album-name{
+
 }
 
 #artist-head-card .image{
