@@ -4,17 +4,20 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { GLOBAL } from '../services/global';
 import { ArtistService } from '../services/artist.service';
 import { UserService } from '../services/user.service';
+import { AlbumService } from '../services/album.service';
+import { Album } from '../models/album'
 import { Artist } from '../models/artist';
 
 @Component({
 	selector: 'artist-detail',
 	templateUrl: '../views/artist-detail.html',
-	providers: [UserService, ArtistService]
+	providers: [UserService, ArtistService, AlbumService]
 })
 
 export class ArtistDetailComponent implements OnInit {
 	public titulo: string;
 	public artist: Artist;
+	private albums: Album[];
 	public identity;
 	public token;
 	public url: string;
@@ -25,7 +28,8 @@ export class ArtistDetailComponent implements OnInit {
 		private _route: ActivatedRoute,
 		private _router: Router,
 		private _userService: UserService,
-		private _artistService: ArtistService
+		private _artistService: ArtistService,
+		private  _albumService: AlbumService
 	) {
 		this.titulo = 'Datos del artista';
 		this.identity = this._userService.getIdentity();
@@ -57,6 +61,24 @@ export class ArtistDetailComponent implements OnInit {
 						this._router.navigate(['/']);
 					} else {
 						this.artist = response.artist;
+						//Sacar los datos del artista
+						this._albumService.getAlbums(this.token, response.artist._id).subscribe(
+							response => {
+								if(!response.albums) {
+									this.alertMessage = "Este artista no tiene albums";
+								} else {
+									this.albums = response.albums;
+								}
+							},
+							error => {
+								var errorMessage = <any>error;
+
+								if(errorMessage != null) {
+									var body = JSON.parse(error._body);
+									this.alertMessage = "Error al cargar los albums";
+								}
+							}
+						);
 					}
 				},
 				error => {

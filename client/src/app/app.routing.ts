@@ -11,6 +11,8 @@ import {ArtistListComponent} from './components/artist-list.component';
 import { ArtistAddComponent } from './components/artist-add.component';
 import { ArtistEditComponent } from './components/artist-edit.component';
 import { ArtistDetailComponent } from './components/artist-detail.component';
+import { AlbumAddComponent } from './components/album-add.component';
+import { AlbumEditComponent } from './components/album-edit.component';
 
 //array con todas nuestras configuraciones de rutas
 
@@ -21,6 +23,8 @@ const appRoutes: Routes = [
 	{path: 'crear-artista', component: ArtistAddComponent},
 	{path: 'ver-artista/:id', component: ArtistDetailComponent},
 	{path: 'editar-artista/:id', component: ArtistEditComponent},
+	{path:'crear-album/:artist', component: AlbumAddComponent},
+	{path: 'editar-album/:id', component: AlbumEditComponent},
 	{path: '**', component: HomeComponent},
 	{path: '', component: HomeComponent},
 ];
