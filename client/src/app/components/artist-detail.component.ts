@@ -93,4 +93,35 @@ export class ArtistDetailComponent implements OnInit {
 			);
 		});
 	}
+
+	public confirmado;
+	onDeleteConfirm(id){
+		this.confirmado = id;
+	}
+
+	onCancelAlbum(){
+		this.confirmado = null;
+	}
+
+	onDeleteAlbum(id){
+		this._albumService.deleteAlbum(this.token, id).subscribe(
+			response => {
+				if(!response.album) {
+					this.alertMessage = "Error en el servidor al borrar el album";
+				} else {
+					this.alertMessage = "Album borrado correctamente.";
+				}
+				this.getArtist();
+			},
+			error => {
+				var errorMessage = <any>error;
+
+					if(errorMessage != null) {
+						var body = JSON.parse(error._body);
+						this.alertMessage = body.message;
+						console.log(error);
+					}
+			}
+		);
+	}
 }
