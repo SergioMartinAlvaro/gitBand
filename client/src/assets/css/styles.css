@@ -23,6 +23,14 @@ html, body {
 	position: absolute;
 }
 
+.seguro-song{
+	background-color: #eee;
+	position: absolute;
+	margin-left: 500px;
+	right: 20px;
+	margin-top: -38px;
+}
+
 .head-title{
 	font-size: 20px;
 	font-weight: bold;
@@ -177,7 +185,8 @@ html, body {
 
 }
 
-#artist-head-card .image{
+#artist-head-card .image,
+#album-head-card .image{
 	width: 150px;
 	height: 150px;
 	overflow: hidden;
@@ -186,7 +195,35 @@ html, body {
 	margin-top: 10px;
 }
 
-#artist-head-card .image img{
+#artist-head-card .image img,
+#album-head-card .image img{
 	height: 150px;
 }
 
+/* CANCIONES */
+
+#songs-list{
+	margin:0px;
+	padding:0px;
+
+}
+
+
+.song-item{
+	list-style: none;
+	border-bottom: 1px solid #ccc;
+	padding-top: 3px;
+
+}
+
+.song-item .buttons {
+	float: right;
+}
+
+.song-item .title {
+	padding: 12px;
+}
+
+.song-item .btn-success {
+	margin-right: 10px;
+}

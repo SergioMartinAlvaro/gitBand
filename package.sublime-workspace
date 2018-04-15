@@ -40,37 +40,28 @@
 	"buffers":
 	[
 		{
+			"file": "client/src/app/services/album.service.ts",
+			"settings":
+			{
+				"buffer_size": 2316,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "client/src/app/components/artist-detail.component.ts",
 			"settings":
 			{
-				"buffer_size": 2591,
+				"buffer_size": 3215,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "client/src/assets/css/styles.css",
+			"file": "api/routes/albums.js",
 			"settings":
 			{
-				"buffer_size": 2557,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/src/app/app.module.ts",
-			"settings":
-			{
-				"buffer_size": 1317,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "client/src/app/views/artist-detail.html",
-			"settings":
-			{
-				"buffer_size": 1535,
-				"encoding": "UTF-8",
+				"buffer_size": 860,
 				"line_ending": "Windows"
 			}
 		}
@@ -108,19 +99,24 @@
 	"expanded_folders":
 	[
 		"/C/xampp/htdocs/gitBand",
+		"/C/xampp/htdocs/gitBand/api",
+		"/C/xampp/htdocs/gitBand/api/routes",
 		"/C/xampp/htdocs/gitBand/client",
 		"/C/xampp/htdocs/gitBand/client/src",
 		"/C/xampp/htdocs/gitBand/client/src/app",
 		"/C/xampp/htdocs/gitBand/client/src/app/components",
 		"/C/xampp/htdocs/gitBand/client/src/app/models",
 		"/C/xampp/htdocs/gitBand/client/src/app/services",
-		"/C/xampp/htdocs/gitBand/client/src/app/views",
 		"/C/xampp/htdocs/gitBand/client/src/assets",
 		"/C/xampp/htdocs/gitBand/client/src/assets/css"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/gitBand/client/src/assets/css/styles.css",
+		"/C/xampp/htdocs/gitBand/client/src/app/views/artist-detail.html",
 		"/C/xampp/htdocs/gitBand/client/src/app/components/artist-edit.component.ts",
+		"/C/xampp/htdocs/gitBand/client/src/app/components/artist-detail.component.ts",
+		"/C/xampp/htdocs/gitBand/client/src/app/components/artist-list.component.ts",
 		"/C/xampp/htdocs/gitBand/client/src/app/components/album-edit.component.ts",
 		"/C/xampp/htdocs/gitBand/client/src/app/components/album-list.component.ts",
 		"/C/xampp/htdocs/gitBand/client/src/app/services/album.service.ts",
@@ -131,15 +127,11 @@
 		"/C/xampp/htdocs/gitBand/client/src/app/app.module.ts",
 		"/C/xampp/htdocs/gitBand/client/src/app/components/album-add.component.ts",
 		"/C/xampp/htdocs/gitBand/client/src/app/views/album-add.html",
-		"/C/xampp/htdocs/gitBand/client/src/app/views/artist-detail.html",
 		"/C/xampp/htdocs/gitBand/client/src/app/models/album.ts",
 		"/C/xampp/htdocs/gitBand/api/models/album.js",
-		"/C/xampp/htdocs/gitBand/client/src/app/components/artist-list.component.ts",
 		"/C/xampp/htdocs/gitBand/client/src/app/views/artist-list.html",
-		"/C/xampp/htdocs/gitBand/client/src/assets/css/styles.css",
 		"/C/xampp/htdocs/gitBand/client/src/app/services/artist.service.ts",
 		"/C/xampp/htdocs/gitBand/api/routes/artist.js",
-		"/C/xampp/htdocs/gitBand/client/src/app/components/artist-detail.component.ts",
 		"/C/xampp/htdocs/gitBand/api/controllers/artist.js",
 		"/C/xampp/htdocs/gitBand/client/src/app/views/artist-add.html",
 		"/C/xampp/htdocs/gitBand/client/src/app/services/upload.service.ts",
@@ -163,7 +155,7 @@
 	],
 	"find":
 	{
-		"height": 52.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -198,24 +190,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "client/src/app/components/artist-detail.component.ts",
+					"file": "client/src/app/services/album.service.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2591,
+						"buffer_size": 2316,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2346,
-								2346
+								2267,
+								2267
 							]
 						],
 						"settings":
@@ -224,48 +216,48 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 879.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "client/src/assets/css/styles.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2557,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2278,
-								2278
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2497.0,
+						"translation.y": 917.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
+					"buffer": 1,
+					"file": "client/src/app/components/artist-detail.component.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3215,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3205,
+								3205
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2260.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
 					"buffer": 2,
-					"file": "client/src/app/app.module.ts",
+					"file": "api/routes/albums.js",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1317,
+						"buffer_size": 860,
 						"regions":
 						{
 						},
@@ -278,44 +270,13 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "client/src/app/views/artist-detail.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1535,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								557,
-								557
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
 					"type": "text"
 				}
 			]
