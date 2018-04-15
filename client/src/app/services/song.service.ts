@@ -50,4 +50,27 @@ export class SongService {
 		});
 		return this._http.put(this.url+'update-song/'+id, params,{headers : headers}).map(res => res.json());
 	}
+
+	getSongs(token, albumId = null) {
+		//Cabeceras de la peticion con el formato de la info dada y la autorizacion
+		let headers = new Headers({
+			'Content-Type':'application/json',
+			'Authorization':token
+		});
+
+		if(albumId == null) {
+			return this._http.get(this.url+'songs',{headers : headers}).map(res => res.json());
+		} else {
+			return this._http.get(this.url+'songs/'+albumId,{headers : headers}).map(res => res.json());
+		}
+	}
+
+	deleteSong(token, id:string) {
+		let headers = new Headers({
+			'Content-Type':'application/json',
+			'Authorization':token
+		});
+
+		return this._http.delete(this.url+'delete-song/'+id,{headers : headers}).map(res => res.json());
+	}
 }

@@ -86,7 +86,7 @@ export class SongEditComponent implements OnInit {
 						//Subir fichero cancion
 						this._uploadService.makeFileRequest(this.url+'upload-song-file/'+id,[],this.filesToUpload,this.token,'file').then(
 							(result) => {
-								this._router.navigate(['/editar-tema',this.song.album._id]);
+								//this._router.navigate(['/editar-tema',this.song.album._id]);
 								this.getSong();
 								this.alertMessage = "Cancion editada correctamente";
 							},
