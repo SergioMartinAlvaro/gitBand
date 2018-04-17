@@ -74,6 +74,8 @@
   </div> -->
   <div [class.hidden]="!identity" *ngIf="identity" class="central col-lg-12">
     <router-outlet></router-outlet>
+    <div class="clearfix"></div>
+    <player class="player" *ngIf="identity"></player>
   </div>
 
   <div class="central col-lg-11" *ngIf="!identity" >

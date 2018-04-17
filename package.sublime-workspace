@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"margin-",
+				"margin-left"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
 				"inl",
 				"inline-block"
 			],
@@ -14,10 +30,6 @@
 			[
 				"Artist",
 				"ArtistAddComponent"
-			],
-			[
-				"margin-",
-				"margin-top"
 			],
 			[
 				"cle",
@@ -40,28 +52,64 @@
 	"buffers":
 	[
 		{
-			"file": "client/src/app/services/album.service.ts",
+			"file": "client/src/app/services/song.service.ts",
 			"settings":
 			{
-				"buffer_size": 2316,
+				"buffer_size": 2395,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "client/src/app/components/artist-detail.component.ts",
+			"file": "client/src/assets/css/styles.css",
 			"settings":
 			{
-				"buffer_size": 3215,
+				"buffer_size": 3470,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "api/routes/albums.js",
+			"file": "client/src/app/components/player.component.ts",
 			"settings":
 			{
-				"buffer_size": 860,
+				"buffer_size": 1118,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "api/routes/song.js",
+			"settings":
+			{
+				"buffer_size": 834,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/src/app/app.module.ts",
+			"settings":
+			{
+				"buffer_size": 1687,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/src/app/app.component.html",
+			"settings":
+			{
+				"buffer_size": 5251,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/src/app/views/song-add.html",
+			"settings":
+			{
+				"buffer_size": 1640,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		}
@@ -101,32 +149,36 @@
 		"/C/xampp/htdocs/gitBand",
 		"/C/xampp/htdocs/gitBand/api",
 		"/C/xampp/htdocs/gitBand/api/routes",
+		"/C/xampp/htdocs/gitBand/api/uploads",
 		"/C/xampp/htdocs/gitBand/client",
 		"/C/xampp/htdocs/gitBand/client/src",
-		"/C/xampp/htdocs/gitBand/client/src/app",
-		"/C/xampp/htdocs/gitBand/client/src/app/components",
-		"/C/xampp/htdocs/gitBand/client/src/app/models",
-		"/C/xampp/htdocs/gitBand/client/src/app/services",
 		"/C/xampp/htdocs/gitBand/client/src/assets",
 		"/C/xampp/htdocs/gitBand/client/src/assets/css"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/gitBand/api/routes/song.js",
+		"/C/xampp/htdocs/gitBand/client/src/app/views/album-detail.html",
+		"/C/xampp/htdocs/gitBand/client/src/app/components/player.component.ts",
+		"/C/xampp/htdocs/gitBand/client/src/app/components/album-detail.component.ts",
 		"/C/xampp/htdocs/gitBand/client/src/assets/css/styles.css",
+		"/C/xampp/htdocs/gitBand/client/src/app/services/album.service.ts",
+		"/C/xampp/htdocs/gitBand/client/src/app/components/song-edit.component.ts",
+		"/C/xampp/htdocs/gitBand/client/src/app/app.routing.ts",
+		"/C/xampp/htdocs/gitBand/client/src/app/components/song-add.component.ts",
+		"/C/xampp/htdocs/gitBand/client/src/app/views/song-add.html",
+		"/C/xampp/htdocs/gitBand/client/src/app/app.module.ts",
+		"/C/xampp/htdocs/gitBand/client/src/app/components/artist-detail.component.ts",
+		"/C/xampp/htdocs/gitBand/client/src/app/views/album-add.html",
 		"/C/xampp/htdocs/gitBand/client/src/app/views/artist-detail.html",
 		"/C/xampp/htdocs/gitBand/client/src/app/components/artist-edit.component.ts",
-		"/C/xampp/htdocs/gitBand/client/src/app/components/artist-detail.component.ts",
 		"/C/xampp/htdocs/gitBand/client/src/app/components/artist-list.component.ts",
 		"/C/xampp/htdocs/gitBand/client/src/app/components/album-edit.component.ts",
 		"/C/xampp/htdocs/gitBand/client/src/app/components/album-list.component.ts",
-		"/C/xampp/htdocs/gitBand/client/src/app/services/album.service.ts",
 		"/C/xampp/htdocs/gitBand/client/src/app/app.component.ts",
 		"/C/xampp/htdocs/gitBand/client/src/app/app.component.html",
-		"/C/xampp/htdocs/gitBand/client/src/app/app.routing.ts",
 		"/C/xampp/htdocs/gitBand/api/routes/albums.js",
-		"/C/xampp/htdocs/gitBand/client/src/app/app.module.ts",
 		"/C/xampp/htdocs/gitBand/client/src/app/components/album-add.component.ts",
-		"/C/xampp/htdocs/gitBand/client/src/app/views/album-add.html",
 		"/C/xampp/htdocs/gitBand/client/src/app/models/album.ts",
 		"/C/xampp/htdocs/gitBand/api/models/album.js",
 		"/C/xampp/htdocs/gitBand/client/src/app/views/artist-list.html",
@@ -155,7 +207,7 @@
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 52.0
 	},
 	"find_in_files":
 	{
@@ -190,24 +242,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "client/src/app/services/album.service.ts",
+					"file": "client/src/app/services/song.service.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2316,
+						"buffer_size": 2395,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2267,
-								2267
+								1999,
+								1999
 							]
 						],
 						"settings":
@@ -216,48 +268,77 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 917.0,
+						"translation.y": 932.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/src/assets/css/styles.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3470,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3467,
+								3467
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4620.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "client/src/app/components/player.component.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1118,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1040,
+								1040
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 414.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "client/src/app/components/artist-detail.component.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3215,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3205,
-								3205
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2260.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "api/routes/albums.js",
+					"buffer": 3,
+					"file": "api/routes/song.js",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 860,
+						"buffer_size": 834,
 						"regions":
 						{
 						},
@@ -276,7 +357,96 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "client/src/app/app.module.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1687,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1316,
+								1316
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 203.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "client/src/app/app.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5251,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3173,
+								3173
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1769.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "client/src/app/views/song-add.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1640,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1198,
+								1198
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -284,7 +454,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 34.0
+		"height": 30.0
 	},
 	"input":
 	{
@@ -321,7 +491,7 @@
 	"project": "package.sublime-project",
 	"replace":
 	{
-		"height": 63.0
+		"height": 55.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -359,7 +529,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 301.0,
+	"side_bar_width": 306.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
